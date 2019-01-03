@@ -1,0 +1,47 @@
+{
+  "name": "e_demo",
+  "version": "1.0.0",
+  "description": "electron demo",
+  "homepage": "http://stilen.com",
+  "main": "main.js",
+  "scripts": {
+    "postinstall": "install-app-deps",
+    "start": "npm install && electron .",
+    "pack": "build --dir",
+    "dist": "build"
+  },
+  "author": "John Stile <john@stilen.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "asar": "^0.14.6",
+    "electron": "^4.0.0",
+    "electron-builder": "^20.38.4"
+  },
+  "build": {
+    "appId": "e_demo",
+    "dmg": {
+      "contents": [
+        {
+          "x": 110,
+          "y": 150
+        },
+        {
+          "x": 240,
+          "y": 150,
+          "type": "link",
+          "path": "/Applications"
+        }
+      ]
+    },
+    "linux": {
+      "target": [
+        "AppImage",
+        "deb"
+      ]
+    },
+    "win": {
+      "target": "NSIS",
+      "icon": "build/icon.ico"
+    }
+  }
+}
