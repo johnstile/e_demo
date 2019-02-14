@@ -1,9 +1,27 @@
 <html>
- <scirpt>
-   const fs = require('fs')
-   const os = require('os')
-   const files = fs.readdirSync(os.homedir())
-   document.innerHTML = files.join('<br>')
- </script>
- <script src="try/too.js"></script>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Hello World!</title>
+</head>
+
+<body>
+  <h1>Watch a Serial port</h1>
+  We are using node <script>
+    document.write(process.versions.node)
+  </script>,
+  Chrome <script>
+    document.write(process.versions.chrome)
+  </script>,
+  and Electron <script>
+    document.write(process.versions.electron)
+  </script>.
+  <br>
+  <div id="serial_content">
+    Serial Port Content
+  </div>
+  <script src="read_serial.js"></script>
+  <br>This is the end, my friend.
+</body>
+
 </html>

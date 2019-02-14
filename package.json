@@ -43,5 +43,8 @@
       "target": "NSIS",
       "icon": "build/icon.ico"
     }
+  },
+  "dependencies": {
+    "serialport": "^7.1.3"
   }
 }

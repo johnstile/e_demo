@@ -6,6 +6,8 @@ mkdir e_demo && cd e_demo
 npm init
 npm install electron --save-dev
 npm install electron-builder --save-dev
+npm install electron-is-dev --save-dev
+npm install electron-devtools-installer --save-dev
 touch main.js index.html
 ```
 
@@ -97,5 +99,10 @@ npm run start
 ## Pacagke
 ```
 npm run build
+```
+
+## Add reading from a serial port 
+```
+npm install serail --save
 ```
 
