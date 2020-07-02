@@ -106,3 +106,12 @@ npm run build
 npm install serail --save
 ```
 
+## Add react 
+```
+organize things
+create directories public and dist
+mv index.html into public
+add this to index.html
+  <div id="root"></div>
+```
+
