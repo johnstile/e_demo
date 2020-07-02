@@ -5,7 +5,7 @@
   "homepage": "http://stilen.com",
   "main": "main.js",
   "scripts": {
-    "postinstall": "install-app-deps",
+    "postinstall": "electron-builder  install-app-deps",
     "start": "npm install && electron .",
     "pack": "build --dir",
     "dist": "build"

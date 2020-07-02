@@ -1,7 +1,26 @@
-# e_demo
+# Electron Demo - minimum steps to get something to start quickly
+
+## Initial setup
+```.
+npm run install
+```
+## Launch
+```.
+npm run start
+```
+## Pacagke
+```.
+npm run build
+```
+## Add reading from a serial port 
+```.
+npm install serail --save
+```
 
 ## MVP (Minimum viable product) Setup app 
-```
+```.
+How I created this in the beginning:
+
 mkdir e_demo && cd e_demo
 npm init
 npm install electron --save-dev
@@ -12,10 +31,11 @@ touch main.js index.html
 ```
 
 # Create main
+```.
 - main controls the app lifecycle
 - open, close, menu bar, etc. os level stuff
 - In default package.json,  main looks for index.js, so this must be changed
-```
+
 cat > main.js<<'EOF'
 const { app, BrowserWindow} = require('electron')
 let win
@@ -27,7 +47,7 @@ EOF
 ``` 
 
 ## Create initial html
-```
+```.
 cat > index.html <<'EOF'
 <html>
  <scirpt>
@@ -43,7 +63,7 @@ EOF
 
 ## Edit package.json
 ### Change main to our js file
-```
+```.
 From:
   "main": "index.js",
 To:
@@ -51,7 +71,7 @@ To:
 ```
 
 ### Add script targets
-```
+```.
   "scripts": {
     "postinstall": "install-app-deps",
     "start": "npm install && electron ./app",
@@ -61,7 +81,8 @@ To:
 ```
 
 ### Add the build target for making the standalone app
-```
+## Initial setup
+```.
   "build": {
     "appId": "e_demo",
     "dmg": {
@@ -91,23 +112,8 @@ To:
   }
 ```
 
-## Launch
-```
-npm run start
-```
-
-## Pacagke
-```
-npm run build
-```
-
-## Add reading from a serial port 
-```
-npm install serail --save
-```
-
 ## Add react 
-```
+```.
 organize things
 create directories public and dist
 mv index.html into public
