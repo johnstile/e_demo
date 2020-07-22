@@ -14,7 +14,7 @@
   "license": "ISC",
   "devDependencies": {
     "asar": "^0.14.6",
-    "electron": ">=7.2.4",
+    "electron": "^9.1.1",
     "electron-builder": "^22.7.0"
   },
   "build": {
@@ -45,6 +45,7 @@
     }
   },
   "dependencies": {
+    "npm-check-updates": "^7.0.2",
     "serialport": "^9.0.0"
   }
 }
